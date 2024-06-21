@@ -15,7 +15,7 @@ public class CLI {
   }
 
   private String doCommand(List<String> command) {
-    String primaryCommand = command.getFirst();
+    String primaryCommand = command.get(0);
     for (Command c : commandList) {
       if (c.getName().equals(primaryCommand)) {
         return c.execute(fileSystem, command);
