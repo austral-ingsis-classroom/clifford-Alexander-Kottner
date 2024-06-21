@@ -1,0 +1,34 @@
+@startuml
+class CLI {
+}
+
+interface FileComponent{
+}
+
+class FileSystem {
+}
+
+class File {
+}
+
+class Directory {
+}
+
+interface Command {
+}
+
+class CommandParser {
+}
+
+
+CLI --|> Command
+CLI --|> CommandParser
+CommandParser --|> Command
+CLI --|> FileSystem
+FileSystem --|> FileComponent
+FileComponent --|> File
+FileComponent --|> Directory
+
+
+
+@enduml
